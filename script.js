@@ -44,10 +44,6 @@ function generatePassword() {
       numCat++;
     }
   }
-  console.log(numCat);
-
-  // Create arrays for possible characters based on character class
-  //var lowerArr = ["a", "b", "c", "d", "e", "f", "g",]
 
   // Declare array to save randomly generated characters
   var charArray = [];
@@ -88,7 +84,7 @@ function generatePassword() {
       console.log(uChar);
       charArray.push(uChar);
     }
-    charTracker = charTracker-numLower;
+    charTracker = charTracker-numUpper;
     numCat--;
   }
   console.log(charArray);
@@ -108,7 +104,7 @@ function generatePassword() {
     console.log(nChar);
     charArray.push(nChar);
   }
-  charTracker = charTracker-numLower;
+  charTracker = charTracker-numNum;
   numCat--;
 }
 console.log(charArray);
