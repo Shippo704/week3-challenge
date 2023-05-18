@@ -125,7 +125,6 @@ function generatePassword() {
       charArray.push(sChar);
     }
   }
-  console.log(charArray);
 
   //Generate password randomly from array
   
@@ -149,15 +148,14 @@ function generatePassword() {
 
     }
   }
-  console.log(indexArr);
 
   //Use matching index array to create password
-  var password = "";
+  var pass = "";
   for (i=0; i<indexArr.length; i++) {
-    password = password + charArray[indexArr[i]];
+    pass = pass + charArray[indexArr[i]];
   }
 
-  console.log(password);
+  return pass;
 }
 
 // Add event listener to generate button
