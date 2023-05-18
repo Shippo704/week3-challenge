@@ -61,13 +61,11 @@ function generatePassword() {
     var lChar = "";
     for (i=0; i<numLower; i++) {
       lChar = String.fromCharCode(Math.floor((Math.random()*26)+97));
-      console.log(lChar);
       charArray.push(lChar);
     }
     charTracker = charTracker-numLower;
     numCat--;
   }
-  console.log(charArray);
 
   //Uppercase Characters
   if (upper == true) {
@@ -81,13 +79,11 @@ function generatePassword() {
     var uChar = "";
     for (i=0; i<numUpper; i++) {
       uChar = String.fromCharCode(Math.floor((Math.random()*26)+65));
-      console.log(uChar);
       charArray.push(uChar);
     }
     charTracker = charTracker-numUpper;
     numCat--;
   }
-  console.log(charArray);
 
  //Numbers
  if (number == true) {
@@ -101,13 +97,10 @@ function generatePassword() {
   var nChar = "";
   for (i=0; i<numNum; i++) {
     nChar = String.fromCharCode(Math.floor((Math.random()*10)+48));
-    console.log(nChar);
     charArray.push(nChar);
   }
   charTracker = charTracker-numNum;
   numCat--;
-}
-console.log(charArray);
  
   //Special Characters
   if (special == true) {
@@ -128,11 +121,12 @@ console.log(charArray);
         sChar = String.fromCharCode(sChar + 69);
       }
 
-      console.log(sChar);
       charArray.push(sChar);
     }
   }
   console.log(charArray);
+
+
 
 }
 
