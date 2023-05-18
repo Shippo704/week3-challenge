@@ -101,6 +101,7 @@ function generatePassword() {
   }
   charTracker = charTracker-numNum;
   numCat--;
+}
  
   //Special Characters
   if (special == true) {
@@ -126,7 +127,40 @@ function generatePassword() {
   }
   console.log(charArray);
 
+  //Generate password randomly from array
+  var indexArr = [];
+  var index = 0;
+  while (indexArr.length < passLength){
+    index = Math.floor(Math.random()*passLength);
+    if (indexArr.length == 0){
+      indexArr.push(index);
+    }
+    else {
+      for (i=0; i<indexArr.length; i++){
+        if (index == indexArr[i]){
+          index = Math.floor(Math.random()*passLength);
+          i = -1;
+        }
+      }
+    indexArr.push(index);
 
+    }
+  }
+  console.log(indexArr);
+
+
+  // var passCharIndex = 0;
+  // var password = "";
+  // var charsLeft = passLength;
+  // for (i=0; i<passLength; i++){
+  //   passCharIndex = Math.floor(Math.random()*(charsLeft));
+  //   password = password + charArray[passCharIndex];
+  //   delete charArray[passCharIndex];
+  //   charsLeft--;
+
+  //   console.log(password);
+  //   console.log(charArray);
+  // }
 
 }
 
