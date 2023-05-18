@@ -128,6 +128,8 @@ function generatePassword() {
   console.log(charArray);
 
   //Generate password randomly from array
+  
+  //Generate matching index array
   var indexArr = [];
   var index = 0;
   while (indexArr.length < passLength){
@@ -136,6 +138,7 @@ function generatePassword() {
       indexArr.push(index);
     }
     else {
+      //Antiduplication algorithm
       for (i=0; i<indexArr.length; i++){
         if (index == indexArr[i]){
           index = Math.floor(Math.random()*passLength);
@@ -148,20 +151,13 @@ function generatePassword() {
   }
   console.log(indexArr);
 
+  //Use matching index array to create password
+  var password = "";
+  for (i=0; i<indexArr.length; i++) {
+    password = password + charArray[indexArr[i]];
+  }
 
-  // var passCharIndex = 0;
-  // var password = "";
-  // var charsLeft = passLength;
-  // for (i=0; i<passLength; i++){
-  //   passCharIndex = Math.floor(Math.random()*(charsLeft));
-  //   password = password + charArray[passCharIndex];
-  //   delete charArray[passCharIndex];
-  //   charsLeft--;
-
-  //   console.log(password);
-  //   console.log(charArray);
-  // }
-
+  console.log(password);
 }
 
 // Add event listener to generate button
