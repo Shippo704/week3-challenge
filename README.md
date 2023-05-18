@@ -16,7 +16,7 @@ Prompts and confirms will be presented to the user when they click the "Generate
 
 ## Visual
 
-[This is a picture of what the full webpage looks like after a password has been generated with 20 characters and all character classes enabled](/images/webpage.jpeg)
+![This is a picture of what the full webpage looks like after a password has been generated with 20 characters and all character classes enabled](./images/webpage.jpeg)
 
 ## URLs
 
